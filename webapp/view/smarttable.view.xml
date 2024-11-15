@@ -1,0 +1,47 @@
+<mvc:View controllerName="com.mit.smarttable.smarttable.controller.smarttable"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"  xmlns:core="sap.ui.core"
+		xmlns:f="sap.f"
+		xmlns:fb="sap.ui.comp.filterbar"
+		xmlns:svm="sap.ui.comp.smartvariants"
+	    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns="sap.m">
+
+		<Page
+		title="Title"
+		class="sapUiContentPadding sapUiResponsivePadding--header sapUiResponsivePadding--subHeader sapUiResponsivePadding--content sapUiResponsivePadding--footer"
+		showNavButton="true" >
+	
+		<content>
+
+    
+					
+					<VBox fitContainer="true">
+			<smartFilterBar:SmartFilterBar id="smartFilterBar" liveMode="true" entitySet="Products" persistencyKey="SmartFilter_Explored" basicSearchFieldName="Bukrs" enableBasicSearch="true" />
+
+			<smartTable:SmartTable id="LineItemsSmartTable" entitySet="Products" smartFilterId="smartFilterBar" tableType="Table"  useVariantManagement="true" useTablePersonalisation="true" header="Products" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true" class="sapUiResponsiveContentPadding" enableAutoColumnWidth="true">		
+		          <Table>
+				  <items>
+	<ColumnListItem id="_IDGenColumnListItem1" type="Navigation" press="onNavObject" >
+	<cells>
+	
+	</cells>
+	</ColumnListItem>
+	</items>
+	</Table>
+	</smartTable:SmartTable>
+				</VBox>
+				</content>
+		
+	</Page>
+					
+
+
+
+						
+		
+    
+
+
+
+</mvc:View>

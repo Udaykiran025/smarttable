@@ -1,0 +1,64 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/V2/Northwind/Northwind.svc/$metadata">
+        <edmx:Include Namespace="NorthwindModel"/>
+        <edmx:Include Namespace="ODataWeb.Northwind.Model" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local1">
+      
+ <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="NorthwindModel.Product">
+        
+    <Annotation Term="com.sap.vocabularies.UI.v1.SelectionFields">
+
+        <Collection>
+            <PropertyPath>ProductName</PropertyPath>
+            <PropertyPath>SupplierID</PropertyPath>
+            <PropertyPath>CategoryID</PropertyPath>
+        </Collection>
+
+    </Annotation>
+     <Annotations xmlns="http://docs.oasis-open.org/odata/ns/edm" Target="NorthwindModel.Product">
+
+     <Annotation Term="com.sap.vocabularies.UI.v1.LineItem">
+          <Collection>
+            <Record Type="com.sap.vocabularies.UI.v1.DataField">
+              <PropertyValue Property="Label" String="Product ID"/>
+              <PropertyValue Property="Value" Path="ProductID"/>
+            </Record>
+            <Record Type="com.sap.vocabularies.UI.v1.DataField">
+              <PropertyValue Property="Label" String="Product Name"/>
+              <PropertyValue Property="Value" Path="ProductName"/>
+            </Record>
+            <Record Type="com.sap.vocabularies.UI.v1.DataField">
+              <PropertyValue Property="Label" String="Units In Stock"/>
+              <PropertyValue Property="Value" Path="UnitsInStock"/>
+            </Record>
+            <Record Type="com.sap.vocabularies.UI.v1.DataField">
+              <PropertyValue Property="Label" String="Discontinued"/>
+              <PropertyValue Property="Value" Path="Discontinued"/>
+            </Record>
+            <Record Type="com.sap.vocabularies.UI.v1.DataField">
+              <PropertyValue Property="Label" String="Unit Price"/>
+              <PropertyValue Property="Value" Path="UnitPrice">
+                  
+              </PropertyValue>
+            </Record>
+          </Collection>
+        </Annotation>
+        </Annotations>
+
+</Annotations>
+
+
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

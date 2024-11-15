@@ -1,0 +1,165 @@
+<mvc:View  xmlns:mvc="sap.ui.core.mvc"
+		   xmlns="sap.uxap"
+		   xmlns:layout="sap.ui.layout"
+		   xmlns:m="sap.m"
+
+controllerName="com.mit.smarttable.smarttable.controller.Display"		  
+    height="100%">
+
+    <ObjectPageLayout id="ObjectPageLayout"
+		enableLazyLoading="true"
+		beforeNavigate="onBeforeNavigate"
+		useIconTabBar="true"
+		showTitleInHeaderContent="true"
+		upperCaseAnchorBar="false"
+		sectionChange="onSectionChange">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle id="_IDGenObjectPageDynamicHeaderTitle1">
+				<expandedHeading>
+					<m:Title id="_IDGenTitle1" text="Product Name : {ObjectData>/ProductName}" wrapping="true"/>
+					
+				</expandedHeading>
+
+				<snappedHeading>
+					<m:FlexBox id="_IDGenFlexBox1" fitContainer="true" alignItems="Center">
+						<m:Avatar id="_IDGenAvatar1" src="./test-resources/sap/uxap/images/imageID_275314.png" class="sapUiTinyMarginEnd"/>
+						<m:Title id="_IDGenTitle2" text="{ObjectData>/ProductName}" wrapping="true" />
+					</m:FlexBox>
+				</snappedHeading>
+
+				<expandedContent>
+					<m:Text id="_IDGenText1" text="Product ID : {ObjectData>/ProductID}"/>
+				</expandedContent>
+			
+				<snappedContent>
+					<m:Text id="_IDGenText2" text="{ObjectData>/ReorderLevel}"/>
+				</snappedContent>
+
+				<actions>
+					<m:Button id="_IDGenButton1" text="Edit" type="Emphasized" press="onEdit"/>
+					<m:Button id="_IDGenButton2" type="Transparent" text="Delete"/>
+					<m:Button id="_IDGenButton3" type="Transparent" text="Copy"/>
+					<m:OverflowToolbarButton id="_IDGenOverflowToolbarButton1" icon="sap-icon://action" type="Transparent" text="Share" tooltip="action"/>
+				</actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+
+		<headerContent>
+			<m:FlexBox id="_IDGenFlexBox2" wrap="Wrap" fitContainer="true" >
+				
+							
+
+				<layout:VerticalLayout id="_IDGenVerticalLayout2" class="sapUiSmallMarginBeginEnd">
+					<m:Label id="_IDGenLabel1" text="{ObjectData>/ProductName}"/>
+					<m:VBox id="_IDGenVBox1">
+						<m:Label id="_IDGenLabel2" text="{ObjectData>/UnitPrice}"/>
+						
+					</m:VBox>
+				</layout:VerticalLayout>
+
+				<layout:VerticalLayout id="_IDGenVerticalLayout3" class="sapUiSmallMarginBeginEnd">
+					<m:Label id="_IDGenLabel3" text="{ObjectData>/UnitsInStock}"/>
+				</layout:VerticalLayout>
+			</m:FlexBox>
+		</headerContent>
+
+		<sections>
+			<ObjectPageSection titleUppercase="false" id="goals" title="2014 Goals Plan">
+			<subSections>
+				<ObjectPageSubSection id="goalsSS1" titleUppercase="false">
+					<blocks>
+						
+					</blocks>
+				</ObjectPageSubSection>
+			</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" id="personal" title="Order Details">
+				<subSections>
+					<ObjectPageSubSection id="personalSS1" title="Order" titleUppercase="false">
+						<blocks>
+							<m:Table id="_IDGenTable1" items ="{ObjectData>/Order_Details/results}" >
+							<m:columns>
+							<m:Column id="_IDGenColumn1" >
+							<m:Text id="_IDGenText3" text ="OrderID" ></m:Text>
+							</m:Column>
+
+							<m:Column id="_IDGenColumn2" >
+							<m:Text id="_IDGenText4" text ="Quantity" ></m:Text>
+							</m:Column>
+
+							<m:Column id="_IDGenColumn3" >
+							<m:Text id="_IDGenText5" text ="UnitPrice" ></m:Text>
+							</m:Column>
+
+							<m:Column id="_IDGenColumn4" >
+							<m:Text id="_IDGenText6" text ="Discount" ></m:Text>
+							</m:Column>
+
+							</m:columns>
+							<m:items>
+							<m:ColumnListItem id="_IDGenColumnListItem1" >
+							<m:cells>
+							<m:Text id="_IDGenText46" text ="{ObjectData>OrderID}" ></m:Text>
+							<m:Text id="_IDGenText56" text ="{ObjectData>Quantity}" ></m:Text>
+							<m:Text id="_IDGenText66" text ="{ObjectData>UnitPrice}" ></m:Text>
+							<m:Text id="_IDGenText76" text ="{ObjectData>Discount}" ></m:Text>
+							</m:cells>
+							</m:ColumnListItem>
+							</m:items>
+							</m:Table>
+						</blocks>
+					</ObjectPageSubSection>
+
+					<ObjectPageSubSection id="personalSS2" title="Payment information" titleUppercase="false">
+						<blocks>
+							<m:Label id="_IDGenLabel43" text="{ObjectData>/UnitsInStock}"/>
+						</blocks>
+						<moreBlocks>
+							
+						</moreBlocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+			<ObjectPageSection titleUppercase="false" id="employment" title="Product Details">
+				<subSections>
+					<ObjectPageSubSection id="employmentSS1" title="ProductName" titleUppercase="false">
+						<blocks>
+							<m:Label id="_IDGenLabel73" text="{ObjectData>/ProductName}"/>
+						</blocks>
+					</ObjectPageSubSection>
+
+					<ObjectPageSubSection id="employmentSS2" title="UnitsInStock" titleUppercase="false">
+						<blocks>
+							<m:Label id="_IDGenLabelsw43" text="{ObjectData>/UnitsInStock}"/>
+						</blocks>
+						<moreBlocks>
+							
+						</moreBlocks>
+					</ObjectPageSubSection>
+
+					<ObjectPageSubSection id="employmentSS3" title=" UnitPrice" titleUppercase="false">
+						<blocks>
+                          <m:Label id="_IDGenLabel393" text="{ObjectData>/UnitPrice}"/>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+			<ObjectPageSection titleUppercase="false" id="connections" title="Connections">
+				<subSections>
+					<ObjectPageSubSection id="connectionsSS1" titleUppercase="false">
+
+
+						<blocks>
+							
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+
+
+
+</mvc:View>
