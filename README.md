@@ -57,5 +57,37 @@ This project is a great example of utilizing modern web technologies to work wit
 - **Record Navigation**: Clicking on any row in the SmartTable will take the user to a separate page where they can view the complete details of the selected record.
 - **Northwind OData Service**: The data is fetched from the publicly available Northwind OData services, which provides sample business data related to orders, customers, products, and more.
 
+  ## How It Works
+
+### SmartFilter Bar:
+- The SmartFilter Bar is a key component of the application. It allows users to filter the data displayed in the table based on multiple criteria.
+- The filters are dynamic, meaning they automatically update the available filtering options based on the data retrieved from the OData service.
+
+### SmartTable:
+- The SmartTable is a responsive table that displays the filtered data from the Northwind OData service.
+- Each row in the table corresponds to a record, such as an order or a customer.
+- The table automatically updates to show only the records that meet the criteria specified by the user in the SmartFilter Bar.
+
+### Record Navigation:
+- When a user clicks on a row in the table, the application navigates to a new page where the complete details of the selected record are displayed.
+- This functionality allows users to view more detailed information about a single record, such as customer details, order items, or product information.
+
+## How It Works
+
+### SmartFilter Bar:
+- The SmartFilter Bar is a key component of the application. It allows users to filter the data displayed in the table based on multiple criteria, such as customer names, order statuses, and product categories.
+- The filters are dynamic, meaning they automatically update the available filtering options based on the data retrieved from the OData service.
+
+### SmartTable:
+- The SmartTable is a responsive table that displays the filtered data from the Northwind OData service.
+- Each row in the table corresponds to a record, such as an order or a customer.
+- The table automatically updates to show only the records that meet the criteria specified by the user in the SmartFilter Bar.
+
+### Record Navigation:
+- When a user clicks on a row in the table, the application navigates to a new page where the complete details of the selected record are displayed.
+- This functionality allows users to view more detailed information about a single record, such as customer details, order items, or product information.
+
+
+
 
 
